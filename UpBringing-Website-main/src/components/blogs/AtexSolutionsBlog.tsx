@@ -56,7 +56,7 @@ export function AtexSolutionsBlog() {
           <div className="px-8 py-12 prose prose-lg max-w-none">
             <h1 style={{ color: "#1e293b", fontSize: "24px", fontWeight: "bold" }}>Explosion-Proof Industrial Solutions and Advanced Vacuum Pump Technology for Safer, Smarter Operations</h1>
             <img 
-              src={atexImage} 
+              src={atexImage.src} 
               alt="Industrial facility with advanced vacuum pump and explosion-proof equipment setup"
               className="w-full h-auto rounded-lg my-6 shadow-lg"
             />
@@ -72,7 +72,7 @@ export function AtexSolutionsBlog() {
               Why Explosion-Proof Industrial Equipment Matters
             </h2>
             <img 
-              src={atexImage2}
+              src={atexImage2.src}
               alt="Explosion-proof industrial equipment and hazard safety systems"
               className="w-full h-auto rounded-lg my-6 shadow-lg"
             />
@@ -111,7 +111,7 @@ export function AtexSolutionsBlog() {
             <h2 className="text-3xl font-bold text-slate-900 mt-8 mb-4" style={{ color: "#1e293b", fontSize: "20px", fontWeight: "bold" }}>
               Industrial Vacuum Pump Solutions for Every Application
             </h2>
-            <img src={atexImage3} alt="Industrial vacuum pump solutions for every application" className="w-full h-auto rounded-lg my-6 shadow-lg" />
+            <img src={atexImage3.src} alt="Industrial vacuum pump solutions for every application" className="w-full h-auto rounded-lg my-6 shadow-lg" />
 
             <p className="text-lg text-slate-700 leading-relaxed">
               As companies search for the best vacuum pump for industrial use, we offer a wide range of systems tailored for different sectors:
