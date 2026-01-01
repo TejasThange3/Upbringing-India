@@ -1,10 +1,11 @@
 import { Card } from "./ui/card";
+import { StaticImageData } from "next/image";
 
 interface BrandCardProps {
   brand: {
     name: string;
     country: string;
-    logo: string;
+    logo: string | StaticImageData;
   };
   onClick: () => void;
 }
@@ -17,7 +18,7 @@ export function BrandCard({ brand, onClick }: BrandCardProps) {
     >
       <div className="flex items-center justify-center mb-6 h-32">
         <img 
-          src={brand.logo} 
+          src={typeof brand.logo === 'string' ? brand.logo : brand.logo.src} 
           alt={brand.name}
           className="max-w-full max-h-full object-contain"
         />

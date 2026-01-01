@@ -9,7 +9,7 @@ import { Footer } from "../components/Footer";
 import { Search, Loader2, AlertCircle } from "lucide-react";
 import { getRecommendations } from "../services/recommendationService";
 import { useAuth } from "../contexts/AuthContext";
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 
 const productsData = [
   {

@@ -2,7 +2,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ProductDetail } from "../components/ProductDetail";
 import { useParams, useNavigate } from "react-router-dom";
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 
 const productsDataByBrand: { [key: string]: any } = {
   "1": {

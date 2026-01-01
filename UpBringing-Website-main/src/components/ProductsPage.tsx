@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
+import { StaticImageData } from "next/image";
 import { BrandCard } from "./BrandCard";
 import { ProductCard } from "./ProductCard";
 import { BrandProductCategories } from "./BrandProductCategories";
@@ -11,7 +12,7 @@ import atlasLogo from '../assets/atlas-copco-vacuum-global.png';
 import fipaLogo from '../assets/fipa-gmbh-germany.png';
 import supervaneLogo from '../assets/supervane-united-kingdom.png';
 import eurovacLogo from '../assets/eurovac.png';
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 
 const brandsData = [
   // VACUUM PUMPS
@@ -85,7 +86,7 @@ const productsDataByBrand: { [key: number]: any[] } = {
         "Packaging",
         "Vacuum Systems"
       ],
-      image: productImage
+      image: typeof productImage === 'string' ? productImage : productImage.src
     }
   ],
   3: [
@@ -111,7 +112,7 @@ const productsDataByBrand: { [key: number]: any[] } = {
         "Automation Systems",
         "Material Handling"
       ],
-      image: productImage
+      image: typeof productImage === 'string' ? productImage : productImage.src
     }
   ],
   4: [
@@ -137,7 +138,7 @@ const productsDataByBrand: { [key: number]: any[] } = {
         "Assembly Lines",
         "Material Handling"
       ],
-      image: productImage
+      image: typeof productImage === 'string' ? productImage : productImage.src
     }
   ]
 };

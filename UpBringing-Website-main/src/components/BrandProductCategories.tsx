@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, Loader2 } from "lucide-react";
 import { Card } from "./ui/card";
 import { useNavigate } from "react-router-dom";
+import { StaticImageData } from "next/image";
 import {
   buildBrandDataFromZoho,
   type BrandProductData,
   type ZohoProduct,
 } from "../services/brandProductService";
 import { useProducts } from "../contexts/ProductsContext";
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 import generalEuropeLogo from '../assets/general-europe-vacuum-srl-italy (1).png';
 import briwatecLogo from '../assets/briwatec-gmbh-germany.png';
 import atlasCopcoLogo from '../assets/atlas-copco-vacuum-global.png';
@@ -18,7 +19,7 @@ import eurovacLogos from '../assets/eurovac.png';
 
 interface ProductSeries {
   name: string;
-  image: string;
+  image: string | StaticImageData;
   description: string;
 }
 
@@ -30,7 +31,7 @@ interface ProductCategory {
 interface BrandInfo {
   id: number;
   name: string;
-  logo: string;
+  logo: string | StaticImageData;
   tagline: string;
   country: string;
   primaryColor: string;
@@ -327,7 +328,7 @@ export function BrandProductCategories({ brandId, onBack }: BrandProductCategori
         brandName,
         brandId,
         zohoProducts,
-        productImage
+        typeof productImage === 'string' ? productImage : productImage.src
       );
 
       if (zohoBrandData.categories.length > 0) {
@@ -393,7 +394,7 @@ export function BrandProductCategories({ brandId, onBack }: BrandProductCategori
             <div className="bg-white rounded-lg p-6 shadow-lg flex items-center gap-4">
               <div className="w-20 h-20 flex items-center justify-center">
                 <img
-                  src={brand.logo}
+                  src={typeof brand.logo === 'string' ? brand.logo : brand.logo.src}
                   alt={brand.name}
                   className="max-w-full max-h-full object-contain"
                 />
@@ -437,13 +438,14 @@ export function BrandProductCategories({ brandId, onBack }: BrandProductCategori
                       {/* Product Image */}
                       <div className="bg-slate-50 p-6 flex items-center justify-center h-56 group-hover:bg-slate-100 transition-colors">
                         <img
-                          src={series.image || productImage}
+                          src={typeof series.image === 'string' ? series.image : (series.image as StaticImageData).src}
                           alt={series.name}
                           className="max-w-full max-h-full object-contain"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            if (target.src !== productImage) {
-                              target.src = productImage;
+                            const fallbackSrc = typeof productImage === 'string' ? productImage : productImage.src;
+                            if (target.src !== fallbackSrc) {
+                              target.src = fallbackSrc;
                             }
                           }}
                         />

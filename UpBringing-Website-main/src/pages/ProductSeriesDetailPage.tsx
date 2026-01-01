@@ -10,7 +10,7 @@ import {
   type ZohoProduct,
 } from "../services/brandProductService";
 import { useProducts } from "../contexts/ProductsContext";
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 import generalEuropeLogo from '../assets/general-europe-vacuum-srl-italy (1).png';
 import briwatecLogo from '../assets/briwatec-gmbh-germany.png';
 import atlasLogo from '../assets/atlas-copco-vacuum-global.png';

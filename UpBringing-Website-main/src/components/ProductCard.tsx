@@ -4,7 +4,8 @@ import { Card, CardContent, CardHeader } from "./ui/card";
 import { Button } from "./ui/button";
 import { Package, Gauge, Zap } from "lucide-react";
 import { useState } from "react";
-import productImage from 'figma:asset/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
+import { StaticImageData } from "next/image";
+import productImage from '@/assets/a4a5af2683bbdd28f7ae7396c60654e45e826fcd.png';
 
 interface ProductCardProps {
   product: {
@@ -31,13 +32,14 @@ export function ProductCard({ product, isInquiryOpen, setIsInquiryOpen }: Produc
       <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white">
       <div className="relative h-80 bg-white overflow-hidden">
         <img
-          src={product.image || productImage}
+          src={product.image || (typeof productImage === 'string' ? productImage : productImage.src)}
           alt={product.product}
           className="w-full h-full object-cover"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
-            if (target.src !== productImage) {
-              target.src = productImage;
+            const fallbackSrc = typeof productImage === 'string' ? productImage : productImage.src;
+            if (target.src !== fallbackSrc) {
+              target.src = fallbackSrc;
             }
           }}
         />
