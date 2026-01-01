@@ -8,7 +8,8 @@ const getEnvVar = (key: string) => {
     return process.env[key];
   }
   // Client-side - try both import.meta.env (Vite) and process.env (Next.js)
-  return (typeof import.meta !== 'undefined' && import.meta.env?.[key]) || process.env[key];
+  const importMetaEnv = (typeof import.meta !== 'undefined' && (import.meta as any).env) || {};
+  return importMetaEnv[key] || process.env[key];
 };
 
 const firebaseConfig = {

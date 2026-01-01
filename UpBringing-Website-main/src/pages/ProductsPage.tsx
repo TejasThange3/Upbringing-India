@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export function ProductsPageRoute() {
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="products" />
+      <Header />
       <ProductsPageComponent />
       <Footer />
     </div>

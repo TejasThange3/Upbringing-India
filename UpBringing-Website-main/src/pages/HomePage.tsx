@@ -135,7 +135,7 @@ export function HomePage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="home" />
+      <Header />
       <HeroSection />
       <SearchSection 
         application={application}

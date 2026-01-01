@@ -53,7 +53,7 @@ export interface BrandProductData {
   categories: ProductCategory[];
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_BASE_URL = (typeof process !== 'undefined' && process.env.VITE_API_URL) || (typeof (import.meta as any).env !== 'undefined' && (import.meta as any).env.VITE_API_URL) || 'http://localhost:3001';
 
 /**
  * Get product image URL through worker proxy

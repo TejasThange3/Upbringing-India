@@ -21,7 +21,7 @@ export function BrandCategoriesPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="products" />
+      <Header />
       <BrandProductCategories brandId={parseInt(brandId)} onBack={handleBack} />
       <Footer />
     </div>

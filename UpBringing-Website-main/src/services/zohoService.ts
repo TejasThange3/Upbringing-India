@@ -32,7 +32,7 @@ export const submitToZohoCRM = async (
 ): Promise<ZohoResponse> => {
   try {
     // IMPORTANT: Replace this URL with your actual backend API endpoint
-    const API_ENDPOINT = import.meta.env.VITE_ZOHO_API_ENDPOINT || 'http://localhost:3001/api/zoho/leads';
+    const API_ENDPOINT = (typeof process !== 'undefined' && process.env.VITE_ZOHO_API_ENDPOINT) || (typeof (import.meta as any).env !== 'undefined' && (import.meta as any).env.VITE_ZOHO_API_ENDPOINT) || 'http://localhost:3001/api/zoho/leads';
 
     const payload = {
       data: [
@@ -93,7 +93,7 @@ export const submitDirectToZoho = async (
 ): Promise<ZohoResponse> => {
   try {
     // Get your API domain from Zoho settings (e.g., zohoapis.com, zohoapis.eu, etc.)
-    const API_DOMAIN = import.meta.env.VITE_ZOHO_API_DOMAIN || 'www.zohoapis.com';
+    const API_DOMAIN = (typeof process !== 'undefined' && process.env.VITE_ZOHO_API_DOMAIN) || (typeof (import.meta as any).env !== 'undefined' && (import.meta as any).env.VITE_ZOHO_API_DOMAIN) || 'www.zohoapis.com';
     const MODULE_API_NAME = 'Website_Leads'; // Update if your module name is different
 
     const response = await fetch(

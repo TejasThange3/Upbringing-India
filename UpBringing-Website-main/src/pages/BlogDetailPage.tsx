@@ -89,7 +89,7 @@ export function BlogDetailPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="blogs" />
+      <Header />
       <BlogDetail blog={blog} onBack={() => navigate("/blogs")} />
       <Footer />
     </div>

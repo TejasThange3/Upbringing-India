@@ -154,7 +154,7 @@ export function ProductDetailPage() {
   if (!rawProduct) {
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header currentPage="products" />
+        <Header />
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold text-slate-900 mb-4">Product Not Found</h1>
           <button
@@ -183,7 +183,7 @@ export function ProductDetailPage() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="products" />
+      <Header />
       <ProductDetail
         product={product}
         onBack={() => navigate("/products")}

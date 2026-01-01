@@ -33,7 +33,7 @@ export const getRecommendations = async (
 ): Promise<RecommendationResponse> => {
   try {
     // API endpoint - defaults to localhost:3001 for development
-    const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT || 'http://localhost:3001/api/recommendations';
+    const API_ENDPOINT = (typeof process !== 'undefined' && process.env.VITE_API_ENDPOINT) || (typeof (import.meta as any).env !== 'undefined' && (import.meta as any).env.VITE_API_ENDPOINT) || 'http://localhost:3001/api/recommendations';
 
     const payload = {
       application: request.application,

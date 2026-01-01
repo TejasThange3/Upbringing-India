@@ -46,7 +46,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   1: {
     id: 1,
     name: "EUROVAC",
-    logo: eurovacLogos,
+    logo: eurovacLogos.src,
     tagline: "ADVANCED VACUUM TECHNOLOGY",
     country: "Europe",
     primaryColor: "#f58522",
@@ -58,12 +58,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "EV SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "EV SERIES European-engineered rotary vane vacuum pumps. High performance and reliability for demanding industrial vacuum applications."
           },
           {
             name: "EV PREMIUM",
-            image: productImage,
+            image: productImage.src,
             description: "EV PREMIUM Premium rotary vane pumps with advanced sealing technology. Optimized for continuous operation in critical industrial environments."
           }
         ]
@@ -73,7 +73,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "ESD SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "ESD SERIES Dry screw vacuum pumps designed for oil-free vacuum applications. Advanced cooling ensures maximum efficiency and reliability."
           }
         ]
@@ -83,7 +83,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   2: {
     id: 2,
     name: "Atlas Copco Vacuum",
-    logo: atlasLogo,
+    logo: atlasLogo.src,
     tagline: "SUSTAINABLE PRODUCTIVITY",
     country: "Global",
     primaryColor: "#DC2626",
@@ -95,12 +95,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "GHS VSD+",
-            image: productImage,
+            image: productImage.src,
             description: "GHS VSD+ Variable speed drive technology for maximum energy efficiency. Smart controls automatically adjust pump speed to match demand, reducing energy consumption by up to 50%."
           },
           {
             name: "GVS SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "GVS SERIES Oil-sealed rotary vane vacuum pumps designed for continuous operation. Proven reliability in demanding industrial applications with minimal maintenance requirements."
           }
         ]
@@ -110,7 +110,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "DZS VSD+",
-            image: productImage,
+            image: productImage.src,
             description: "DZS VSD+ Dry screw vacuum pumps with variable speed drive. 100% oil-free vacuum for critical applications. Advanced cooling system ensures optimal performance."
           }
         ]
@@ -120,7 +120,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   3: {
     id: 3,
     name: "GENERAL EUROPE VACUUM S.r.l",
-    logo: generalEuropeLogo,
+    logo: generalEuropeLogo.src,
     tagline: "MADE IN ITALY",
     country: "Italy",
     primaryColor: "#15803D",
@@ -132,17 +132,17 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "GP/GPM SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "GP/GPM SERIES Range 'S' is the last generation of two-stage and two-finned oil-lubricated and rotary vanes vacuum pumps model GP S and GPM S, manufactured under best standards with quality seals and"
           },
           {
             name: "Oxygen Range",
-            image: productImage,
+            image: productImage.src,
             description: "Oxygen Range GEV builds GP-My oxy series lubricated empty. oven-ruined characteristicsof its reliability and low operating costs. They are pumps built to be used in the presence of oxygen, emerging industries."
           },
           {
             name: "Z SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "Z SERIES The Z SERIES lubricated vane vacuum pumps have an increased ability to tolerate vapors and allow them to work in environments with a damp presence of water vapor. The"
           }
         ]
@@ -152,7 +152,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "GPR 150",
-            image: productImage,
+            image: productImage.src,
             description: "GPR SERIES The compressors and clean vacuum pumps of the GPR series SIMULATOR SERIES are based on a claw compression system. Compared to rotary vane models, compression occurs internally by contactless cl"
           }
         ]
@@ -162,12 +162,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "GSD SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "GSD SERIES Dry screw vacuum pumps designed for industrial applications requiring oil-free vacuum technology. Advanced sealing technology ensures maximum efficiency and reliability."
           },
           {
             name: "GSH SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "GSH SERIES High-performance dry screw vacuum pumps with variable speed drive technology. Optimized for energy efficiency and continuous operation in demanding industrial environments."
           }
         ]
@@ -177,7 +177,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   4: {
     id: 4,
     name: "Briwatec GmbH",
-    logo: briwatecLogo,
+    logo: briwatecLogo.src,
     tagline: "GERMAN ENGINEERING",
     country: "Germany",
     primaryColor: "#0369A1",
@@ -189,12 +189,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "BV SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "BV SERIES Industrial vacuum pumps designed for heavy-duty applications. Features advanced German engineering with robust construction for maximum reliability and performance."
           },
           {
             name: "BT COMPACT",
-            image: productImage,
+            image: productImage.src,
             description: "BT COMPACT Space-saving vacuum solutions perfect for installations with limited space. Combines efficiency with compact design without compromising on performance."
           }
         ]
@@ -206,7 +206,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   5: {
     id: 5,
     name: "SUPERVANE",
-    logo: supervaneLogo,
+    logo: supervaneLogo.src,
     tagline: "QUALITY ENGINEERING",
     country: "United Kingdom",
     primaryColor: "#7C3AED",
@@ -218,12 +218,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "SV ROTOR KITS",
-            image: productImage,
+            image: productImage.src,
             description: "SV ROTOR KITS High-precision rotor assemblies for vacuum pumps. Premium quality components ensuring maximum durability and performance."
           },
           {
             name: "SV VALVE KITS",
-            image: productImage,
+            image: productImage.src,
             description: "SV VALVE KITS Complete valve assemblies with superior sealing characteristics. Engineered for demanding vacuum applications."
           }
         ]
@@ -233,7 +233,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "PRECISION SHAFTS",
-            image: productImage,
+            image: productImage.src,
             description: "PRECISION SHAFTS Perfectly balanced and hardened shafts for smooth operation. Manufactured to exact tolerances for optimal performance."
           }
         ]
@@ -243,7 +243,7 @@ const brandProductData: { [key: number]: BrandInfo } = {
   6: {
     id: 6,
     name: "FIPA GmbH",
-    logo: fipaLogo,
+    logo: fipaLogo.src,
     tagline: "VACUUM TECHNOLOGY",
     country: "Germany",
     primaryColor: "#0891B2",
@@ -255,12 +255,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "FV SERIES",
-            image: productImage,
+            image: productImage.src,
             description: "FV SERIES Compact vacuum generators for automation and handling. High suction capacity with minimal air consumption. Perfect for pick and place applications in assembly lines."
           },
           {
             name: "MULTI-STAGE EJECTORS",
-            image: productImage,
+            image: productImage.src,
             description: "Multi-stage vacuum ejectors offering superior performance. Multiple venturi stages provide high vacuum levels with excellent energy efficiency for demanding automation tasks."
           }
         ]
@@ -270,12 +270,12 @@ const brandProductData: { [key: number]: BrandInfo } = {
         series: [
           {
             name: "SUCTION CUPS",
-            image: productImage,
+            image: productImage.src,
             description: "Wide range of suction cups for various materials and surfaces. From delicate electronics to heavy industrial components, our suction cups ensure reliable gripping."
           },
           {
             name: "VACUUM PADS & GRIPPERS",
-            image: productImage,
+            image: productImage.src,
             description: "Specialized vacuum pads and grippers for precision automation. Available in various materials and configurations for different applications."
           }
         ]
@@ -385,7 +385,7 @@ export function ProductSeriesDetailPage() {
         technicalFeatures,
         specifications,
         highlighted: index === 0, // Highlight first product
-        imageUrl: getProductImageUrl(p) || productImage, // Each model has its own image
+        imageUrl: getProductImageUrl(p) || (typeof productImage === 'string' ? productImage : productImage.src), // Each model has its own image
       };
     });
 
@@ -394,11 +394,11 @@ export function ProductSeriesDetailPage() {
 
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header currentPage="products" />
+        <Header />
         <ProductDetail
           product={{
             name: firstProduct.Series || seriesName || 'Unknown Series',
-            image: getProductImageUrl(firstProduct) || productImage,
+            image: getProductImageUrl(firstProduct) || (typeof productImage === 'string' ? productImage : productImage.src),
             description: firstProductData.description,
             technicalFeatures: firstProductData.technicalFeatures,
             specifications: firstProductData.specifications,
@@ -415,7 +415,7 @@ export function ProductSeriesDetailPage() {
   }
 
   // Fallback to hardcoded data
-  let selectedProduct = null;
+  let selectedProduct: { series: ProductSeries; categoryTitle: string } | null = null;
   let categoryTitle = "";
 
   if (brand && seriesName) {
@@ -435,7 +435,7 @@ export function ProductSeriesDetailPage() {
   if (isLoadingProducts) {
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header currentPage="products" />
+        <Header />
         <div className="flex flex-col items-center justify-center py-20">
           <Loader2 className="w-16 h-16 text-red-500 animate-spin mb-6" />
           <p className="text-slate-600 text-lg">Loading products...</p>
@@ -448,7 +448,7 @@ export function ProductSeriesDetailPage() {
   if (!selectedProduct || !brand) {
     return (
       <div className="min-h-screen bg-slate-50">
-        <Header currentPage="products" />
+        <Header />
         <div className="flex items-center justify-center py-20">
           <p className="text-slate-400">Product series not found</p>
         </div>
@@ -460,12 +460,12 @@ export function ProductSeriesDetailPage() {
   const category = brand.categories.find(cat => cat.title === categoryTitle);
   const models = category?.series.map(s => ({
     name: s.name,
-    highlighted: s.name === selectedProduct.series.name,
+    highlighted: s.name === selectedProduct?.series.name,
   })) || [];
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header currentPage="products" />
+      <Header />
       <ProductDetail
         product={{
           name: selectedProduct.series.name,
@@ -485,7 +485,6 @@ export function ProductSeriesDetailPage() {
             "50 Hz (continued)": "0.22",
             "Motor Speed (single phase)": "3000"
           },
-          models: models,
           seriesName: categoryTitle,
           brandColor: brand.primaryColor,
         }}
