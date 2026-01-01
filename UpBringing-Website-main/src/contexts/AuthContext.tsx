@@ -9,7 +9,7 @@ import {
   signInWithPopup,
   updateProfile,
 } from 'firebase/auth';
-import { auth } from '../lib/firebase';
+import { getFirebaseAuth } from '../lib/firebase';
 
 interface AuthContextType {
   user: User | null;
@@ -27,6 +27,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Only run on client side
+    const auth = getFirebaseAuth();
+    if (!auth) {
+      setLoading(false);
+      return;
+    }
+
     // Listen for auth state changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
@@ -37,6 +44,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signUp = async (email: string, password: string, fullName?: string) => {
+    const auth = getFirebaseAuth();
+    if (!auth) throw new Error('Firebase not initialized');
+    
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
     // Update user profile with full name if provided
@@ -48,15 +58,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signIn = async (email: string, password: string) => {
+    const auth = getFirebaseAuth();
+    if (!auth) throw new Error('Firebase not initialized');
     await signInWithEmailAndPassword(auth, email, password);
   };
 
   const signInWithGoogle = async () => {
+    const auth = getFirebaseAuth();
+    if (!auth) throw new Error('Firebase not initialized');
     const provider = new GoogleAuthProvider();
     await signInWithPopup(auth, provider);
   };
 
   const logout = async () => {
+    const auth = getFirebaseAuth();
+    if (!auth) throw new Error('Firebase not initialized');
     await signOut(auth);
   };
 

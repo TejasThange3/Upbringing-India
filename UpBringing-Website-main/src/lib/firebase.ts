@@ -1,11 +1,11 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp, getApps, FirebaseApp } from 'firebase/app';
+import { getAuth, Auth } from 'firebase/auth';
 
 // Support both Vite and Next.js environment variables
 const getEnvVar = (key: string) => {
   if (typeof window === 'undefined') {
-    // Server-side (Next.js)
-    return process.env[key];
+    // Server-side (Next.js) - return empty string to prevent initialization
+    return '';
   }
   // Client-side - try both import.meta.env (Vite) and process.env (Next.js)
   const importMetaEnv = (typeof import.meta !== 'undefined' && (import.meta as any).env) || {};
@@ -21,9 +21,29 @@ const firebaseConfig = {
   appId: getEnvVar('VITE_FIREBASE_APP_ID') || getEnvVar('NEXT_PUBLIC_FIREBASE_APP_ID'),
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Lazy initialization - only on client side
+let app: FirebaseApp | null = null;
+let auth: Auth | null = null;
 
-// Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
-export default app;
+export const getFirebaseApp = () => {
+  if (typeof window === 'undefined') return null;
+  if (!app && !getApps().length) {
+    app = initializeApp(firebaseConfig);
+  }
+  return app || getApps()[0];
+};
+
+export const getFirebaseAuth = () => {
+  if (typeof window === 'undefined') return null;
+  if (!auth) {
+    const firebaseApp = getFirebaseApp();
+    if (firebaseApp) {
+      auth = getAuth(firebaseApp);
+    }
+  }
+  return auth;
+};
+
+// Legacy exports for backward compatibility
+export { getFirebaseAuth as auth };
+export default getFirebaseApp();
