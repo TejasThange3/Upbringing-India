@@ -1,0 +1,20 @@
+# Don't copy these to Docker image
+node_modules/
+npm-debug.log
+.env
+.env.*
+!.env.example
+build/
+dist/
+.git/
+.gitignore
+README*.md
+DEPLOYMENT*.md
+CLOUDFLARE*.md
+*.md
+logs/
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

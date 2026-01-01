@@ -1,0 +1,86 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+/server/node_modules
+/workers/node_modules
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# local env files - DO NOT COMMIT THESE
+.env*.local
+.env
+.env.production
+.env.cloudflare
+.env.development
+server/.env
+workers/.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+Thumbs.db
+.DS_Store
+*.bak
+*.tmp
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# PM2
+.pm2/
+*.pid
+
+# Temporary files
+temp/
+tmp/
+*.temp

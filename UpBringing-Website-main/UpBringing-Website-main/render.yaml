@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: upbringing-ai-service
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PYTHON_SERVER_URL
+        value: http://localhost:8000
+      - key: PORT
+        value: 10000

@@ -1,0 +1,49 @@
+# Cloudflare Workers Configuration
+# This runs your backend API for FREE on Cloudflare
+
+name = "upbringing-backend"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Workers free tier: 100,000 requests/day
+# More than enough for most projects!
+
+# Environment variables (set these in Cloudflare dashboard or use secrets)
+# DO NOT commit actual values here - use 'wrangler secret put' command
+
+[vars]
+ZOHO_API_DOMAIN = "www.zohoapis.in"
+ZOHO_ACCOUNTS_URL = "https://accounts.zoho.in"
+ZOHO_MODULE_NAME = "Website_Leads"
+AI_SERVICE_URL = "https://upbringing-1.onrender.com"
+
+# Secrets (use: wrangler secret put SECRET_NAME)
+# - ZOHO_CLIENT_ID
+# - ZOHO_CLIENT_SECRET
+# - ZOHO_REFRESH_TOKEN
+
+# Observability configuration
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
+
+# Routes - Deploy to a route or workers.dev subdomain
+# [env.production]
+# routes = [
+#   { pattern = "api.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+# Development
+[env.development]
+name = "upbringing-backend-dev"
