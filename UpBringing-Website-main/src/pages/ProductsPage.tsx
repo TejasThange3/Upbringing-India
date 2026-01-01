@@ -1,6 +1,6 @@
-import { Header } from "../components/Header";
+import Header from "../components/Header";
 import { ProductsPage as ProductsPageComponent } from "../components/ProductsPage";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 
 export function ProductsPageRoute() {
   return (

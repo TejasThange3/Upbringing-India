@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import { Header } from "../components/Header";
-import { HeroSection } from "../components/HeroSection";
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
 import { SearchSection } from "../components/SearchSection";
 import { ProductCard } from "../components/ProductCard";
 import { InquiryModal } from "../components/InquiryModal";
 import { AuthModal } from "../components/AuthModal";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 import { Search, Loader2, AlertCircle } from "lucide-react";
 import { getRecommendations } from "../services/recommendationService";
 import { useAuth } from "../contexts/AuthContext";

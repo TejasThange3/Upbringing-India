@@ -1,6 +1,6 @@
-import { Header } from "../components/Header";
+import Header from "../components/Header";
 import { BlogsPage as BlogsPageComponent } from "../components/BlogsPage";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 
 export function BlogsPageRoute() {
   return (

@@ -3,7 +3,7 @@ import { ArrowRight, Package, TrendingUp, Building2, Beaker, Box, GraduationCap,
 
 interface BlogCardProps {
   blog: {
-    id: number;
+    id: number | string;
     title: string;
     description: string;
     category: string;

@@ -1,5 +1,5 @@
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
