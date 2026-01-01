@@ -58,7 +58,7 @@ export function BricksManufacturingBlog() {
           <div className="px-8 py-12 prose prose-lg max-w-none">
             <h1 style={{ color: "#1e293b", fontSize: "24px", fontWeight: "bold" }}>How Modern Technology Is Transforming the Brick Manufacturing Industry</h1>
               <img 
-                          src={BrickManu1} 
+                          src={BrickManu1.src} 
                           alt="Industrial facility with advanced vacuum pump and explosion-proof equipment setup"
                           className="w-full h-auto rounded-lg my-6 shadow-lg"
                         />
@@ -137,7 +137,7 @@ export function BricksManufacturingBlog() {
               Energy-Efficient Kilns: Lower Consumption, Higher Sustainability
             </h2>
                  <img 
-                          src={BrickManu2} 
+                          src={BrickManu2.src} 
                           alt="Industrial facility with advanced vacuum pump and explosion-proof equipment setup"
                           className="w-full h-auto rounded-lg my-6 shadow-lg"
                         />
@@ -173,7 +173,7 @@ export function BricksManufacturingBlog() {
               Smart Manufacturing for Real-Time Monitoring and Optimization
             </h2>
                  <img 
-                          src={BrickManu3} 
+                          src={BrickManu3.src} 
                           alt="Industrial facility with advanced vacuum pump and explosion-proof equipment setup"
                           className="w-full h-auto rounded-lg my-6 shadow-lg"
                         />
